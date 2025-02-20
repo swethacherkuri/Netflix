@@ -1,0 +1,61 @@
+.netflix-w{
+  width:200px; 
+  
+
+}
+.netflix-word{
+
+  padding-left:30px;
+  padding-top:15px;
+  background-image:linear-gradient(black,white); 
+  position:absolute;
+  background:none;
+  
+ 
+
+}
+.login-form{
+
+  width:200px;
+  position:absolute;
+  margin-left:40%;
+  background:black;
+  padding:100px;
+  
+  margin-top:3%;
+  opacity:0.8;
+  
+  
+ 
+ 
+}
+.email,.password{
+  padding:15px;
+  margin:8px;
+  
+  border:1px solid gray;
+  border-radius:5px;
+  color:white;
+  width:200px;
+  
+}
+.signin{
+  padding:5px;
+  margin:5px;
+  background:red;
+  width:240px;
+}
+.sign-in-heading{
+  color:white;
+}
+.Use-a-sign-in-Code,.forgot-password{
+  padding:5px;
+  margin:5px;
+  width:240px;
+  background:gray;
+
+}
+.sign-in-heading-now{
+color:white;
+cursor:pointer;
+}
