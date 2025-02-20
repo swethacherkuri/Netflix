@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./header";
+import { checkvalidate } from "../utils/validate";
 
 const Login =()=>{
+    const[errormessage,seterrormessage]=useState(null);
+    const email =useRef(null);
+    const password=useRef(null);
     const[signin,Setsignin]=useState(true);
     const handleclick=()=>{
        Setsignin(!signin)
+    }
+    const validatesignin=()=>{
+        const message =checkvalidate(email.current.value,password.current.value);
+        console.log(message);
+        seterrormessage(message);
     }
     return(
 
@@ -15,9 +24,10 @@ const Login =()=>{
    
     <form className="login-form">
         <h1 className="sign-in-heading">Sign In</h1>
-        <input className="email" type="text" placeholder="Email or Mobile number"/>
-         <input  className="password"type="password" placeholder="password"/>
-        <button className="signin">{signin ?"signin":"signUp"}</button>
+        <input ref={email} className="email" type="text" placeholder="Email or Mobile number"/>
+         <input   ref={password}className="password"type="password" placeholder="password"/>
+         <p className="error-message">{errormessage}</p>
+        <button className="signin"  onSubmit={(e)=>e.preventDefault()}onClick={validatesignin}>{signin ?"signin":"signUp"}</button>
         <h3 className="sign-in-heading">OR</h3>
         <button className="Use-a-sign-in-Code">Use a sign-in Code</button>
         <button className="forgot-password">Forgot password</button>
