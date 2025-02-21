@@ -1,6 +1,6 @@
 const Browser =()=>{
     return(
-        <h2>Browser</h2>
+        <h2 >Browser</h2>
     )
 
 

@@ -1,4 +1,7 @@
-.netflix-w{
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+ .netflix-w{
   width:200px; 
   
 
@@ -62,4 +65,4 @@ cursor:pointer;
 .error-message{
   color:white;
   font-size:10px;
-}
+} 
